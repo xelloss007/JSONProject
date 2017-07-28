@@ -12,7 +12,7 @@ public class ListParser {
 	public  Lists doListParser(String jsonString){
 		Lists lists = null;
 		JSONObject obj1 = null;
-		JSONObject json = null;
+//		JSONObject json = null;
   
 		try {
 			obj1 = new JSONObject(jsonString);
@@ -20,6 +20,7 @@ public class ListParser {
 			
 			lists.setStatus(obj1.getString("status"));
 			lists.setCount(obj1.getInt("count"));
+			
 			JSONArray boardArr = obj1.getJSONArray("list");
 			
 			Board board = null;
@@ -28,7 +29,8 @@ public class ListParser {
 				tempBoard = boardArr.getJSONObject(i);
 				board = new Board();
 				board.setNum(tempBoard.getInt("num"));
-				board.setTitle(tempBoard.getString("writer"));
+				board.setTitle(tempBoard.getString("title"));
+				board.setWriter(tempBoard.getString("writer"));
 				board.setContent(tempBoard.getString("content"));
 				board.setCnt(tempBoard.getInt("cnt"));
 				board.setState(tempBoard.getBoolean("state"));

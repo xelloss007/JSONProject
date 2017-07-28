@@ -31,7 +31,7 @@ public class ListTest {
          sb.append(readData).append("\n");
          
          
-         
+         System.out.println(readData);
       }//json문자열을 읽어옴 
       
       String jsonStr = sb.toString();
