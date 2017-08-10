@@ -16,7 +16,7 @@ public class ListTest {
    public ListTest() {
       // TODO Auto-generated constructor stub
    
-   String listURL = "http://192.168.205.108/JSProject/list.txt";
+   String listURL = "http://192.168.205.160/JSProject/list.txt";
    URL url = null;
    HttpURLConnection conn;
    BufferedReader reader = null;

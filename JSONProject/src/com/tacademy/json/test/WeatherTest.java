@@ -22,7 +22,7 @@ public class WeatherTest {
 			url = new URL(weatherURL);
 			conn = (HttpURLConnection)url.openConnection();
 			//			SAX 파싱(이벤트 파싱)
-			int  code = conn.getResponseCode();
+			int code = conn.getResponseCode();
 			switch(code){
 			case HttpURLConnection.HTTP_OK :   //200상수와 같음!!
 //				reader =new BufferedReader(new InputStreamReader(conn.getInputStream()));
